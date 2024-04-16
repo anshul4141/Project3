@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.eclipse.jdt.internal.compiler.env.ISourceMethod;
 
 import in.co.rays.project_3.dto.BaseDTO;
 import in.co.rays.project_3.dto.MarksheetDTO;
@@ -33,7 +32,6 @@ import in.co.rays.project_3.util.ServletUtility;
 @WebServlet(urlPatterns = { "/ctl/MarksheetCtl" })
 public class MarksheetCtl extends BaseCtl {
 
-	
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger(MarksheetCtl.class);
 
@@ -42,8 +40,8 @@ public class MarksheetCtl extends BaseCtl {
 		try {
 			List li = model.list();
 			request.setAttribute("studenList", li);
-			System.out.println("add marksheet"+li);
-		
+			System.out.println("add marksheet" + li);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			log.error(e);
